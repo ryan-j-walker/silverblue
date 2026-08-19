@@ -15,13 +15,13 @@ modules:
   - type: dnf
     repos:
     cleanup: true
-      copr:
+    copr:
         - ublue-os/packages
-      nonfree: rpmfusion
+    nonfree: rpmfusion
     install:
-      packages:
-        - solaar
-        - uupd
+        packages:
+            - solaar
+            - uupd
 
   - type: default-flatpaks
     configurations:
