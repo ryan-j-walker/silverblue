@@ -29,17 +29,16 @@ modules:
 
   - type: fonts
     fonts:
-    nerd-fonts:
+      nerd-fonts:
         - JetBrainsMono
 
   - type: script
-    snippets:
     scripts:
         - theming.sh
 
   - type: systemd
     system:
-    enabled:
+      enabled:
         - podman.socket
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
