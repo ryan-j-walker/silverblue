@@ -16,8 +16,7 @@ modules:
     repos:
       copr:
         - ublue-os/packages
-      nonfree:
-        - rpmfusion
+      nonfree: rpmfusion
     install:
       packages:
         - solaar
