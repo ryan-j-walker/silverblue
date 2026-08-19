@@ -98,7 +98,12 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - JetBrainsMono
+        - Iosevka
+        - IosevkaTerm
+        - IosevkaTermSlab
+      url-fonts:
+        - name: Iosevka
+          url: https://github.com/be5invis/Iosevka/releases/tag/latest
 
   - type: script
     snippets:
