@@ -14,7 +14,7 @@ image-version: latest # You can pin to a specific version of Fedora as well
 modules:
   - type: dnf
     repos:
-      cleanup: true
+      cleanup: false
       copr:
         - peterwu/iosevka
         - ublue-os/packages
