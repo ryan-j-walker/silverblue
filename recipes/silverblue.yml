@@ -18,12 +18,6 @@ modules:
         copr:
             - ublue-os/packages
         nonfree: rpmfusion
-    replace:
-        - from-repo: rpmfusion-nonfree
-          allow-erasing: true
-          packages:
-            - old: ffmpeg-free
-              new: ffmpeg
     group-install:
         with-optional: false
         install-weak-deps: false
@@ -36,6 +30,11 @@ modules:
             - mesa-va-drivers-freeworld
             - solaar
             - uupd
+    replace:
+      - from-repo: rpmfusion-nonfree
+        allow-erasing: true
+        packages:
+          - ffmpeg
 
   - type: default-flatpaks
     configurations:
