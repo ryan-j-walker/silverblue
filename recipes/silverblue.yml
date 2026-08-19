@@ -19,11 +19,11 @@ modules:
             - ublue-os/packages
         nonfree: rpmfusion
     replace:
-        from-repo: rpmfusion
-        allow-erasing: true
-        packages:
-            - old: ffmpeg-free
-            - new: ffmpeg
+        -  from-repo: rpmfusion
+            allow-erasing: true
+            packages:
+                - old: ffmpeg-free
+                - new: ffmpeg
     group-install:
         with-optional: false
         install-weak-deps: false
