@@ -14,28 +14,33 @@ image-version: latest # You can pin to a specific version of Fedora as well
 modules:
   - type: dnf
     repos:
-        cleanup: true
-        copr:
-            - ublue-os/packages
+        cleanup: false
         nonfree: rpmfusion
-    # group-install:
-    #     with-optional: false
-    #     install-weak-deps: false
-    #     exclude:
-    #         - PackageKit-gstreamer-plugin
-    #     packages:
-    #         - multimedia
-    install:
-        packages:
-            - mesa-va-drivers-freeworld
-            - solaar
-            - uupd
     replace:
       - from-repo: rpmfusion-free
         allow-erasing: true
         packages:
           - old: ffmpeg-free
             new: ffmpeg
+
+    - type: dnf
+    repos:
+        cleanup: true
+        copr:
+            - ublue-os/packages
+        nonfree: rpmfusion
+    group-install:
+        with-optional: false
+        install-weak-deps: false
+        exclude:
+            - PackageKit-gstreamer-plugin
+        packages:
+            - multimedia
+    install:
+        packages:
+            - mesa-va-drivers-freeworld
+            - solaar
+            - uupd
 
   - type: default-flatpaks
     configurations:
