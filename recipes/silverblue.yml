@@ -18,13 +18,13 @@ modules:
         copr:
             - ublue-os/packages
         nonfree: rpmfusion
-    group-install:
-        with-optional: false
-        install-weak-deps: false
-        exclude:
-            - PackageKit-gstreamer-plugin
-        packages:
-            - multimedia
+    # group-install:
+    #     with-optional: false
+    #     install-weak-deps: false
+    #     exclude:
+    #         - PackageKit-gstreamer-plugin
+    #     packages:
+    #         - multimedia
     install:
         packages:
             - mesa-va-drivers-freeworld
