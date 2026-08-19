@@ -17,6 +17,7 @@ modules:
       cleanup: true
       copr:
         - ublue-os/packages
+      nonfree: negativo17
     install:
       packages:
         - adw-gtk3-theme
