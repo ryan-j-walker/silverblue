@@ -6,41 +6,16 @@ name: silverblue
 description: This is my personal OS Fedora Silverblue image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: quay.io/fedora/fedora-silverblue
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest # You can pin to a specific version of Fedora as well
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
   - type: dnf
-    repos:
-      cleanup: false
-      nonfree: rpmfusion
-    replace:
-      - from-repo: rpmfusion-free
-        allow-erasing: true
-        packages:
-          - old: ffmpeg-free
-            new: ffmpeg
-
-  - type: dnf
-    repos:
-      cleanup: true
-      copr:
-        - ublue-os/packages
-      nonfree: rpmfusion
-    group-install:
-      with-optional: false
-      install-weak-deps: false
-      exclude:
-        - PackageKit-gstreamer-plugin
-      packages:
-        - multimedia
     install:
       packages:
-        - mesa-va-drivers-freeworld
         - solaar
-        - uupd
 
   - type: default-flatpaks
     configurations:
@@ -62,13 +37,5 @@ modules:
   - type: script
     scripts:
         - theming.sh
-
-  - type: systemd
-    system:
-      disable:
-        - rpm-ostreed-automatic.timer
-      enabled:
-        - podman.socket
-        - uupd.timer
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
