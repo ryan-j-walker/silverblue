@@ -23,7 +23,7 @@ modules:
           allow-erasing: true
           packages:
             - old: ffmpeg-free
-            - new: ffmpeg
+              new: ffmpeg
     group-install:
         with-optional: false
         install-weak-deps: false
