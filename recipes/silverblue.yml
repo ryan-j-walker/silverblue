@@ -14,8 +14,10 @@ image-version: latest # You can pin to a specific version of Fedora as well
 modules:
   - type: dnf
     repos:
+    cleanup: true
       copr:
         - ublue-os/packages
+      nonfree: rpmfusion
     install:
       packages:
         - solaar
@@ -39,6 +41,8 @@ modules:
         - JetBrainsMono
 
   - type: script
+    snippets:
+        - "dnf5 swap ffmpeg-free ffmpeg --allowerasing"
     scripts:
         - theming.sh
 
