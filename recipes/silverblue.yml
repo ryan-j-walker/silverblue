@@ -18,8 +18,22 @@ modules:
         copr:
             - ublue-os/packages
         nonfree: rpmfusion
+    replace:
+        from-repo: rpmfusion
+        allow-erasing: true
+        packages:
+            - old: ffmpeg-free
+            - new: ffmpeg
+    group-install:
+        with-optional: false
+        install-weak-deps: false
+        exclude:
+            - PackageKit-gstreamer-plugin
+        packages:
+            - multimedia
     install:
         packages:
+            - mesa-va-drivers-freeworld
             - solaar
             - uupd
 
@@ -41,8 +55,6 @@ modules:
         - JetBrainsMono
 
   - type: script
-    snippets:
-        - "dnf5 swap ffmpeg-free ffmpeg --allowerasing"
     scripts:
         - theming.sh
 
