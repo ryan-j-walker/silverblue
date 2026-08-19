@@ -38,7 +38,10 @@ modules:
 
   - type: systemd
     system:
+      disable:
+        - rpm-ostreed-automatic.timer
       enabled:
         - podman.socket
+        - uupd.timer
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
