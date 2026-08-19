@@ -6,7 +6,7 @@ name: silverblue
 description: This is my personal OS Fedora Silverblue image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: quay.io/fedora/fedora-silverblue
 image-version: latest # You can pin to a specific version of Fedora as well
 
 # module configuration, executed in order
@@ -19,8 +19,68 @@ modules:
         - ublue-os/packages
     install:
       packages:
+        - adw-gtk3-theme
+        - alsa-firmware
+        - distrobox
+        - fdk-aac
+        - ffmpeg
+        - ffmpeg-libs
+        - ffmpegthumbnailer
+        - flatpak-spawn
+        - fuse
+        - fzf
+        - grub2-tools-extra
+        - gvfs-nfs
+        - heif-pixbuf-loader
+        - htop
+        - ibus-mozc
+        - ibus-unikey
+        - just
+        - libavcodec
+        - libcamera
+        - libcamera-gstreamer
+        - libcamera-ipa
+        - libheif
+        - libcamera-tools
+        - libfdk-aac
+        - libimobiledevice-utils
+        - libratbag-ratbagd
+        - libva-utils
+        - lshw
+        - net-tools
+        - nvme-cli
+        - nvtop
+        - openssl
+        - pam-u2f
+        - pam_yubico
+        - pamu2fcfg
+        - pipewire-libs-extra
+        - pipewire-plugin-libcamera
+        - powerstat
+        - smartmontools
         - solaar
+        - solaar-udev
+        - squashfs-tools
+        - symlinks
+        - tcpdump
+        - tmux
+        - traceroute
+        - usbmuxd
         - uupd
+        - vim
+        - wireguard-tools
+        - wl-clipboard
+        - xhost
+        - xorg-x11-xauth
+        - yubikey-manager
+        - zstd
+    remove:
+      packages:
+        - default-fonts-cjk-sans
+        - fedora-third-party
+        - gnome-software-rpm-ostree
+        - google-noto-sans-cjk-vf-fonts
+        - totem-video-thumbnailer
 
   - type: default-flatpaks
     configurations:
@@ -44,6 +104,8 @@ modules:
         - theming.sh
 
   - type: systemd
+    snippets:
+      - 'sed -Ei "s/secure_path = (.*)/secure_path = \1:\/home\/linuxbrew\/.linuxbrew\/bin/" /etc/sudoers'
     system:
       enabled:
         - podman.socket
