@@ -19,7 +19,7 @@ modules:
             - ublue-os/packages
         nonfree: rpmfusion
     replace:
-        - from-repo: rpmfusion
+        - from-repo: rpmfusion-nonfree-release
           allow-erasing: true
           packages:
             - old: ffmpeg-free
