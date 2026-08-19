@@ -31,7 +31,7 @@ modules:
             - solaar
             - uupd
     replace:
-      - from-repo: rpmfusion-nonfree
+      - from-repo: rpmfusion-free
         allow-erasing: true
         packages:
           - ffmpeg
