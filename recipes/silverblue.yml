@@ -80,7 +80,6 @@ modules:
         - default-fonts-cjk-sans
         - fedora-third-party
         - gnome-software-rpm-ostree
-        - google-noto-*
         - totem-video-thumbnailer
 
   - type: default-flatpaks
