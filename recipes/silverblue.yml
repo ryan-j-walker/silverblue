@@ -80,6 +80,7 @@ modules:
         - default-fonts-cjk-sans
         - fedora-third-party
         - gnome-software-rpm-ostree
+        - google-noto-*-fonts
         - totem-video-thumbnailer
 
   - type: default-flatpaks
@@ -96,8 +97,10 @@ modules:
 
   - type: fonts
     fonts:
-      nerd-fonts:
-        - Noto
+      google-fonts:
+        - Noto Sans
+        - Noto Sans Mono
+        - Noto Serif
 
   - type: script
     snippets:
