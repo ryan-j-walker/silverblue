@@ -16,7 +16,6 @@ modules:
     repos:
       cleanup: false
       copr:
-        - peterwu/iosevka
         - ublue-os/packages
       nonfree: negativo17
     install:
@@ -37,20 +36,6 @@ modules:
         - htop
         - ibus-mozc
         - ibus-unikey
-        - iosevka-fonts
-        - iosevka-aile-fonts
-        - iosevka-curly-fonts
-        - iosevka-curly-slab-fonts
-        - iosevka-etoile-fonts
-        - iosevka-fixed-fonts
-        - iosevka-fixed-curly-fonts
-        - iosevka-fixed-curly-slab-fonts
-        - iosevka-fixed-slab-fonts
-        - iosevka-slab-fonts
-        - iosevka-term-fonts
-        - iosevka-term-curly-fonts
-        - iosevka-term-curly-slab-fonts
-        - iosevka-term-slab-fonts
         - just
         - libavcodec
         - libcamera
@@ -95,7 +80,7 @@ modules:
         - default-fonts-cjk-sans
         - fedora-third-party
         - gnome-software-rpm-ostree
-        - google-noto-sans-cjk-vf-fonts
+        - google-noto-*
         - totem-video-thumbnailer
 
   - type: default-flatpaks
@@ -112,10 +97,10 @@ modules:
 
   - type: fonts
     fonts:
-      nerd-fonts:
-        - Iosevka
-        - IosevkaTerm
-        - IosevkaTermSlab
+      google-fonts:
+        - Noto Sans
+        - Noto Sans Mono
+        - Noto Serif
 
   - type: script
     snippets:
