@@ -14,7 +14,7 @@ image-version: latest # You can pin to a specific version of Fedora as well
 modules:
   - type: dnf
     repos:
-      cleanup: false
+      cleanup: true
       copr:
         - ublue-os/packages
       nonfree: negativo17
@@ -85,7 +85,7 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: true
+      - notify: false
         scope: system
         repo:
           title: Flathub (system)
@@ -110,7 +110,10 @@ modules:
 
   - type: systemd
     system:
+      disable:
+        - rpm-ostreed-automatic.timer
       enabled:
         - podman.socket
+        - uupd.timer
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
