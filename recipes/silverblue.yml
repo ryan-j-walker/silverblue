@@ -94,12 +94,10 @@ modules:
     nofile-limits: true
     brew-analytics: false
 
-  # - type: fonts
-  #   fonts:
-  #     google-fonts:
-  #       - Noto Sans
-  #       - Noto Sans Mono
-  #       - Noto Serif
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Noto
 
   - type: script
     snippets:
