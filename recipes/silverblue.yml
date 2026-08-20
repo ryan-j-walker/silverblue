@@ -96,10 +96,8 @@ modules:
 
   - type: fonts
     fonts:
-      google-fonts:
-        - Noto Sans
-        - Noto Sans Mono
-        - Noto Serif
+      nerd-fonts:
+        - Noto
 
   - type: script
     snippets:
