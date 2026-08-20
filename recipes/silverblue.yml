@@ -95,12 +95,12 @@ modules:
     nofile-limits: true
     brew-analytics: false
 
-  - type: fonts
-    fonts:
-      google-fonts:
-        - Noto Sans
-        - Noto Sans Mono
-        - Noto Serif
+  # - type: fonts
+  #   fonts:
+  #     google-fonts:
+  #       - Noto Sans
+  #       - Noto Sans Mono
+  #       - Noto Serif
 
   - type: script
     snippets:
