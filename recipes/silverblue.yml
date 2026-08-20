@@ -37,6 +37,20 @@ modules:
         - htop
         - ibus-mozc
         - ibus-unikey
+        - iosevka-fonts
+        - iosevka-aile-fonts
+        - iosevka-curly-fonts
+        - iosevka-curly-slab-fonts
+        - iosevka-etoile-fonts
+        - iosevka-fixed-fonts
+        - iosevka-fixed-curly-fonts
+        - iosevka-fixed-curly-slab-fonts
+        - iosevka-fixed-slab-fonts
+        - iosevka-slab-fonts
+        - iosevka-term-fonts
+        - iosevka-term-curly-fonts
+        - iosevka-term-curly-slab-fonts
+        - iosevka-term-slab-fonts
         - just
         - libavcodec
         - libcamera
