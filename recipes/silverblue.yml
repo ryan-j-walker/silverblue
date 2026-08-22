@@ -73,7 +73,6 @@ modules:
       - adw-gtk3 Colorizer
       - Alphabetical App Grid
       - AppIndicator and KStatusNotifierItem Support
-      - Blur my Shell
       - Coverflow Alt-Tab
       - Dash to Panel
       - Just Perfection
