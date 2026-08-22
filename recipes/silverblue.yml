@@ -45,6 +45,9 @@ modules:
       packages:
         - adw-gtk3-theme
         - distrobox
+        - gnome-shell-extension-blur-my-shell
+        - gnome-shell-extension-dash-to-panel
+        - gnome-shell-extension-just-perfection
         - mesa-va-drivers-freeworld
         - mesa-va-drivers-freeworld.i686
         - solaar
