@@ -70,12 +70,14 @@ modules:
   
   - type: gnome-extensions
     install:
+      - adw-gtk3 Colorizer
       - Alphabetical App Grid
       - AppIndicator and KStatusNotifierItem Support
       - Blur my Shell
       - Coverflow Alt-Tab
       - Dash to Panel
       - Just Perfection
+      - User Themes
   
   - type: fonts
     fonts:
