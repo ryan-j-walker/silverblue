@@ -34,6 +34,16 @@ modules:
       copr:
         - ublue-os/packages
       nonfree: rpmfusion
+    remove:
+      packages:
+        - fedora-third-party
+        - gnome-shell-extension-appindicator
+        - gnome-shell-extension-apps-menu
+        - gnome-shell-extension-background-logo
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-places-menu
+        - gnome-shell-extension-window-list
+        - gnome-software-rpm-ostree
     group-install:
       with-optional: false
       install-weak-deps: false
@@ -45,18 +55,11 @@ modules:
       packages:
         - adw-gtk3-theme
         - distrobox
-        - gnome-shell-extension-blur-my-shell
-        - gnome-shell-extension-dash-to-panel
-        - gnome-shell-extension-just-perfection
         - mesa-va-drivers-freeworld
         - mesa-va-drivers-freeworld.i686
         - solaar
         - solaar-udev
         - uupd
-    remove:
-      packages:
-        - fedora-third-party
-        - gnome-software-rpm-ostree
 
   - type: default-flatpaks
     configurations:
@@ -64,6 +67,15 @@ modules:
         scope: system
         repo:
           title: Flathub (system)
+  
+  - type: gnome-extensions
+    install:
+      - Alphabetical App Grid
+      - AppIndicator and KStatusNotifierItem Support
+      - Blur my Shell
+      - Coverflow Alt-Tab
+      - Dash to Panel
+      - Just Perfection
   
   - type: fonts
     fonts:
